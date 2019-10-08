@@ -1,0 +1,42 @@
+PODS:
+  - Realm (3.19.0):
+    - Realm/Headers (= 3.19.0)
+  - Realm/Headers (3.19.0)
+  - RealmSwift (3.19.0):
+    - Realm (= 3.19.0)
+  - YSCheckBox (0.0.1)
+  - YSRadioButton (0.0.1)
+
+DEPENDENCIES:
+  - RealmSwift
+  - YSCheckBox (from `https://github.com/sekies/YSCheckBox.git`)
+  - YSRadioButton (from `https://github.com/sekies/YSRadioButton.git`)
+
+SPEC REPOS:
+  trunk:
+    - Realm
+    - RealmSwift
+
+EXTERNAL SOURCES:
+  YSCheckBox:
+    :git: https://github.com/sekies/YSCheckBox.git
+  YSRadioButton:
+    :git: https://github.com/sekies/YSRadioButton.git
+
+CHECKOUT OPTIONS:
+  YSCheckBox:
+    :commit: b7220246caec53ddf0ef9ae401b6563f2c622920
+    :git: https://github.com/sekies/YSCheckBox.git
+  YSRadioButton:
+    :commit: 7ae99f408771a159a993cdbaeeb067d141f5f8e5
+    :git: https://github.com/sekies/YSRadioButton.git
+
+SPEC CHECKSUMS:
+  Realm: 995d585bcf699aaff226715886c849a29dd3d07f
+  RealmSwift: 35f284a537989f2187b413e5917091948cb87a3f
+  YSCheckBox: 2f6b5e8d66784ba34844093a84198dcecdf69afa
+  YSRadioButton: d36fff9507fc02527bbe44cc1211a201f42d1218
+
+PODFILE CHECKSUM: c8454ded8f732cd10d0f01459766fb3caf4bfd9a
+
+COCOAPODS: 1.8.1
