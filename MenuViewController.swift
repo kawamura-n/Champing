@@ -7,33 +7,31 @@ class MenuViewController: UIViewController,YSRadioButtonViewControllerDelegate {
     @IBOutlet weak var menuView: UIView!
     @IBOutlet weak var radioButtonContainer: UIView!
     
-    var dustString : String = "0"
+    var ecologyString = "0"
+    var preparationString = "0"
+    var timeString = "0"
     
-    @IBAction func dustUISwitch(_ sender: UISwitch) {
+    @IBAction func ecologyUISwitch(_ sender: UISwitch) {
         if sender.isOn == true {
-            dustString = "1"
+            ecologyString = "1"
         } else {
-            dustString = "0"
+            ecologyString = "0"
         }
-        print(dustString)
     }
     
-    var ingledientString : String = "0"
-    
-    @IBAction func ingledientUISwitch(_ sender: UISwitch) {
+    @IBAction func preparationUISwitch(_ sender: UISwitch) {
         if sender.isOn == true {
-            ingledientString = "1"
+            preparationString = "1"
         } else {
-            ingledientString = "0"
+            preparationString = "0"
         }
-        print(ingledientString)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
 ///調理時間　：　 ラジオボタン
-        let radio = YSRadioButtonViewController(labels: ["~30min","~60min","60min~"])
+        let radio = YSRadioButtonViewController(labels: ["こだわりなし","〜30min","〜60min"])
         radio.delegate = self
         radio.font = UIFont.systemFont(ofSize: 18)
         radio.labelColor = .black
@@ -43,17 +41,13 @@ class MenuViewController: UIViewController,YSRadioButtonViewControllerDelegate {
         radio.radioHeadMargin = 5
         radio.radioHeadStroke = .darkGray
         radio.radioHeadFill = .red
-
-        addChild(radio)
         radio.view.frame = radioButtonContainer.bounds
         radioButtonContainer.addSubview(radio.view)
         radio.didMove(toParent: self)
-          
-        // Do any additional setup after loading the view.
     }
     
     func didYSRadioButtonSelect(no: Int) {
-        print(no)
+        timeString = String(no)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,10 +62,15 @@ class MenuViewController: UIViewController,YSRadioButtonViewControllerDelegate {
         super.touchesEnded(touches, with: event)
         for touch in touches {
             if touch.view?.tag == 1 {
-//            let preVC = self.presentingViewController as! MajorViewController
-//                preVC.dustString = self.dustString
                 
-            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn, animations: { self.menuView.layer.position.x = 2 * self.menuView.frame.width}, completion: { bool in self.dismiss(animated: true,completion:nil)
+                let preNC = self.presentingViewController as! UINavigationController
+                let preVC = preNC.viewControllers[preNC.viewControllers.count-1] as! ResultViewController
+                preVC.ecologyString = self.ecologyString
+                preVC.preparationString = self.preparationString
+                preVC.timeString = self.timeString
+                preVC.updateView()
+                UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn, animations:
+                    { self.menuView.layer.position.x = 2 * self.menuView.frame.width}, completion: { bool in self.dismiss(animated: true,completion:nil)
                     }
                 )
             }
@@ -87,15 +86,4 @@ class MenuViewController: UIViewController,YSRadioButtonViewControllerDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -10,7 +10,6 @@ class MajorViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor.init(red: 240/255, green: 248/255, blue: 255/255, alpha: 90/100)
-        
     }
     
     @IBAction func tappedMajor(sender: UIButton){
@@ -19,6 +18,14 @@ class MajorViewController: UIViewController {
             MajorTag = "0"
         case 1:
             MajorTag = "1"
+        case 2:
+            MajorTag = "2"
+        case 3:
+            MajorTag = "3"
+        case 4:
+            MajorTag = "4"
+        case 5:
+            MajorTag = "5"
         default:
             print("errer")
         }
@@ -27,7 +34,7 @@ class MajorViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goMedium" {
-            let nextView = segue.destination as! MediumViewController
+            let nextView: MediumViewController = segue.destination as! MediumViewController
             nextView.sendMajorNum = MajorTag
         }
     }
@@ -38,4 +45,3 @@ class MajorViewController: UIViewController {
     }
  
 }
-

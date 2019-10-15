@@ -1,23 +1,15 @@
 import UIKit
 
 
-class MediumViewController: UIViewController {
-    
-    @IBOutlet weak var label: UILabel!
+class MediumViewController: UIViewController, UINavigationControllerDelegate{
     
     var sendMajorNum = String()
     var MediumTag = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = UIColor.init(red: 240/255, green: 248/255, blue: 255/255, alpha: 90/100)
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        label.text = sendMajorNum
-     }
     
     @IBAction func tappedMedium(sender: UIButton){
         switch sender.tag{
@@ -25,6 +17,10 @@ class MediumViewController: UIViewController {
             MediumTag = "0"
         case 1:
             MediumTag = "1"
+        case 2:
+            MediumTag = "2"
+        case 3:
+            MediumTag = "3"
         default:
             print("errer")
         }
@@ -33,7 +29,7 @@ class MediumViewController: UIViewController {
     
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goResult" {
-            let nextView = segue.destination as! ResultViewController
+            let nextView: ResultViewController = segue.destination as! ResultViewController
 
             nextView.sendMediumNum = MediumTag
             nextView.sendMajorNum = sendMajorNum
