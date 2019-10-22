@@ -1,7 +1,7 @@
 import UIKit
 import RealmSwift
  
-class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,UINavigationControllerDelegate{
     
     var selectedRecipeID: String!
     var ingledientArray: [String] = []
@@ -242,12 +242,10 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         recipes.append(ingledientArray)
         recipes.append(howToMakeArray)
-        
- //       performSegue(withIdentifier: "goFavoriteContainerView", sender: nil)
     }
   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goFavoriteContainerView" {
+        if segue.identifier == "goFavoriteContainerViewController" {
             let nextView: SetFavoriteContainerViewController = segue.destination as! SetFavoriteContainerViewController
             nextView.selectedRecipeID = selectedRecipeID
         }
@@ -258,8 +256,7 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if (tableView.tag == 0) {
             tag = 0
             cellIdentifier = "ingledientCell"
-        }
-        else if (tableView.tag == 1) {
+        }else if (tableView.tag == 1) {
             tag = 1
             cellIdentifier = "howToMakeCell"
         }

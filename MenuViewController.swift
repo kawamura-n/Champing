@@ -54,7 +54,10 @@ class MenuViewController: UIViewController,YSRadioButtonViewControllerDelegate {
         super.viewWillAppear(animated)
         let menuPos = self.menuView.layer.position
         self.menuView.layer.position.x = 2 * self.menuView.frame.width
-        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {self.menuView.layer.position.x = menuPos.x
+   //     self.menuView.layer.position.y = 2*self.menuView.frame.height
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+            self.menuView.layer.position.x = menuPos.x
+            self.menuView.layer.position.y = menuPos.y
         }, completion: {bool in})
     }
     
@@ -64,23 +67,29 @@ class MenuViewController: UIViewController,YSRadioButtonViewControllerDelegate {
             if touch.view?.tag == 1 {
                 
                 let preNC = self.presentingViewController as! UINavigationController
-                let preVC = preNC.viewControllers[preNC.viewControllers.count-1] as! ResultViewController
-                preVC.ecologyString = self.ecologyString
-                preVC.preparationString = self.preparationString
-                preVC.timeString = self.timeString
-                preVC.updateView()
-                UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn, animations:
-                    { self.menuView.layer.position.x = 2 * self.menuView.frame.width}, completion: { bool in self.dismiss(animated: true,completion:nil)
+                let preVC = preNC.viewControllers[preNC.viewControllers.count-1]
+                
+                if preVC is FavoriteRecipesListViewController {
+                    let preVC = preNC.viewControllers[preNC.viewControllers.count-1] as! FavoriteRecipesListViewController
+                    preVC.ecologyString = self.ecologyString
+                    preVC.preparationString = self.preparationString
+                    preVC.timeString = self.timeString
+                    preVC.updateView()
+                }else{
+                    let preVC = preNC.viewControllers[preNC.viewControllers.count-1] as! ResultViewController
+                    preVC.ecologyString = self.ecologyString
+                    preVC.preparationString = self.preparationString
+                    preVC.timeString = self.timeString
+                    preVC.updateView()
+                }
+            
+                UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn, animations:{
+                    self.menuView.layer.position.x = 2 * self.menuView.frame.width}, completion:{
+                    bool in self.dismiss(animated: true,completion:nil)
                     }
                 )
             }
         }
-    }
-    
-
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
     }
     
     override func didReceiveMemoryWarning() {

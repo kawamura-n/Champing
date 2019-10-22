@@ -13,17 +13,18 @@
 		CB2D60592351C8B600E6A0E9 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2D60582351C8B600E6A0E9 /* RecipeViewController.swift */; };
 		CB2E6A2D234068AF00495E3C /* RecipesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2E6A2C234068AF00495E3C /* RecipesDataModel.swift */; };
 		CB2E6A302340CF6900495E3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB2E6A2F2340CF6900495E3C /* Images.xcassets */; };
-		CB304C832341A84C007575B6 /* Ingledient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB304C822341A84C007575B6 /* Ingledient.swift */; };
+		CB304C832341A84C007575B6 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB304C822341A84C007575B6 /* Ingredient.swift */; };
 		CB3BEC1D23293C6A00143885 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3BEC1C23293C6A00143885 /* AppDelegate.swift */; };
-		CB3BEC1F23293C6A00143885 /* MajorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3BEC1E23293C6A00143885 /* MajorView.swift */; };
+		CB3BEC1F23293C6A00143885 /* MajorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3BEC1E23293C6A00143885 /* MajorViewController.swift */; };
 		CB3BEC2223293C6A00143885 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB3BEC2023293C6A00143885 /* Main.storyboard */; };
 		CB3BEC2723293C6E00143885 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB3BEC2523293C6E00143885 /* LaunchScreen.storyboard */; };
 		CB3BEC3223293C6F00143885 /* campingRecipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3BEC3123293C6F00143885 /* campingRecipesTests.swift */; };
 		CB3BEC3D23293C6F00143885 /* campingRecipesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3BEC3C23293C6F00143885 /* campingRecipesUITests.swift */; };
-		CB3D9F6C233F174B002407CC /* MediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3D9F6B233F174B002407CC /* MediumView.swift */; };
-		CB3F14F8233FB0060034FCA1 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F14F7233FB0060034FCA1 /* ResultView.swift */; };
+		CB3D9F6C233F174B002407CC /* MediumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3D9F6B233F174B002407CC /* MediumViewController.swift */; };
+		CB3F14F8233FB0060034FCA1 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F14F7233FB0060034FCA1 /* ResultViewController.swift */; };
 		CB3F14FE233FC6B00034FCA1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F14FD233FC6B00034FCA1 /* MenuViewController.swift */; };
 		CB7A29672355FEF600336243 /* SetFavoriteContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7A29662355FEF600336243 /* SetFavoriteContainerViewController.swift */; };
+		CBCDEA6F235A26B7005AF638 /* FavoriteRecipesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDEA6E235A26B7005AF638 /* FavoriteRecipesListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -70,10 +71,10 @@
 		CB2D60582351C8B600E6A0E9 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		CB2E6A2C234068AF00495E3C /* RecipesDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesDataModel.swift; sourceTree = SOURCE_ROOT; };
 		CB2E6A2F2340CF6900495E3C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		CB304C822341A84C007575B6 /* Ingledient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingledient.swift; sourceTree = "<group>"; };
+		CB304C822341A84C007575B6 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		CB3BEC1923293C6A00143885 /* campingRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = campingRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3BEC1C23293C6A00143885 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CB3BEC1E23293C6A00143885 /* MajorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorView.swift; sourceTree = "<group>"; };
+		CB3BEC1E23293C6A00143885 /* MajorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorViewController.swift; sourceTree = "<group>"; };
 		CB3BEC2123293C6A00143885 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB3BEC2623293C6E00143885 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB3BEC2823293C6E00143885 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,10 +84,11 @@
 		CB3BEC3823293C6F00143885 /* campingRecipesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = campingRecipesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3BEC3C23293C6F00143885 /* campingRecipesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = campingRecipesUITests.swift; sourceTree = "<group>"; };
 		CB3BEC3E23293C6F00143885 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB3D9F6B233F174B002407CC /* MediumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumView.swift; sourceTree = "<group>"; };
-		CB3F14F7233FB0060034FCA1 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		CB3D9F6B233F174B002407CC /* MediumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumViewController.swift; sourceTree = "<group>"; };
+		CB3F14F7233FB0060034FCA1 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		CB3F14FD233FC6B00034FCA1 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = ../MenuViewController.swift; sourceTree = "<group>"; };
 		CB7A29662355FEF600336243 /* SetFavoriteContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetFavoriteContainerViewController.swift; sourceTree = SOURCE_ROOT; };
+		CBCDEA6E235A26B7005AF638 /* FavoriteRecipesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipesListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,13 +170,14 @@
 				CB7A29662355FEF600336243 /* SetFavoriteContainerViewController.swift */,
 				CB3F14FD233FC6B00034FCA1 /* MenuViewController.swift */,
 				CB3BEC1C23293C6A00143885 /* AppDelegate.swift */,
-				CB3BEC1E23293C6A00143885 /* MajorView.swift */,
+				CB3BEC1E23293C6A00143885 /* MajorViewController.swift */,
 				CB2D60582351C8B600E6A0E9 /* RecipeViewController.swift */,
-				CB3D9F6B233F174B002407CC /* MediumView.swift */,
-				CB3F14F7233FB0060034FCA1 /* ResultView.swift */,
-				CB304C822341A84C007575B6 /* Ingledient.swift */,
+				CB3D9F6B233F174B002407CC /* MediumViewController.swift */,
+				CB3F14F7233FB0060034FCA1 /* ResultViewController.swift */,
+				CB304C822341A84C007575B6 /* Ingredient.swift */,
 				CB2E6A2C234068AF00495E3C /* RecipesDataModel.swift */,
 				CB3BEC2023293C6A00143885 /* Main.storyboard */,
+				CBCDEA6E235A26B7005AF638 /* FavoriteRecipesListViewController.swift */,
 				CB3BEC2523293C6E00143885 /* LaunchScreen.storyboard */,
 				CB3BEC2823293C6E00143885 /* Info.plist */,
 				CB2E6A2F2340CF6900495E3C /* Images.xcassets */,
@@ -440,15 +443,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB3BEC1F23293C6A00143885 /* MajorView.swift in Sources */,
+				CB3BEC1F23293C6A00143885 /* MajorViewController.swift in Sources */,
 				CB3F14FE233FC6B00034FCA1 /* MenuViewController.swift in Sources */,
 				CB2D60592351C8B600E6A0E9 /* RecipeViewController.swift in Sources */,
-				CB3D9F6C233F174B002407CC /* MediumView.swift in Sources */,
+				CB3D9F6C233F174B002407CC /* MediumViewController.swift in Sources */,
+				CBCDEA6F235A26B7005AF638 /* FavoriteRecipesListViewController.swift in Sources */,
 				CB2E6A2D234068AF00495E3C /* RecipesDataModel.swift in Sources */,
 				CB7A29672355FEF600336243 /* SetFavoriteContainerViewController.swift in Sources */,
-				CB304C832341A84C007575B6 /* Ingledient.swift in Sources */,
+				CB304C832341A84C007575B6 /* Ingredient.swift in Sources */,
 				CB3BEC1D23293C6A00143885 /* AppDelegate.swift in Sources */,
-				CB3F14F8233FB0060034FCA1 /* ResultView.swift in Sources */,
+				CB3F14F8233FB0060034FCA1 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

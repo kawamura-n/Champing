@@ -3,9 +3,13 @@ import RealmSwift
 
 class ResultViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate  {
     
+    @IBAction func goFavoriteRecipesButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "goFavoriteRecipesListViewController", sender: nil)
+    }
+    
     @IBOutlet var collectionView: UICollectionView!
     @IBAction func goMenuViewButton(_ sender: Any) {
-        performSegue(withIdentifier: "goMenu", sender: nil)
+        performSegue(withIdentifier: "goMenuViewController", sender: nil)
     }
     
     var ecologyString : String!
@@ -30,6 +34,7 @@ class ResultViewController: UIViewController,UICollectionViewDataSource, UIColle
      }
     
     func updateView(){
+        
         var ecologyBool :Bool
         var preparationBool :Bool
         arrayRecipesID = []
@@ -218,7 +223,7 @@ class ResultViewController: UIViewController,UICollectionViewDataSource, UIColle
             // realm.add(data)
             // realm.deleteAll()
         }
-        intSendMajorNum = Int(sendMajorNum)!
+        intSendMajorNum = Int(sendMajorNum)
         intSendMediumNum = Int(sendMediumNum)!
         
         let categoryResults = realm.objects(RecipesDataModel.self).filter("major == %@  && medium == %@",intSendMajorNum!,intSendMediumNum!)
@@ -228,9 +233,7 @@ class ResultViewController: UIViewController,UICollectionViewDataSource, UIColle
             arrayRecipesImage.append(RecipesResult[0].image)
             arrayRecipesName.append(RecipesResult[0].recipeName)
         }
-        
     }
-    
     
     
     @IBAction func resetButton(_ sender: UIBarButtonItem) {
@@ -264,7 +267,6 @@ class ResultViewController: UIViewController,UICollectionViewDataSource, UIColle
 
         let label = cell.contentView.viewWithTag(2) as! UILabel
         label.text = arrayRecipesName[indexPath.row]
-
         return cell
     }
     
@@ -275,12 +277,12 @@ class ResultViewController: UIViewController,UICollectionViewDataSource, UIColle
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedRecipeID = arrayRecipesID[indexPath.row]
         if selectedRecipeID != nil{
-            performSegue(withIdentifier: "goRecipe", sender: nil)
+            performSegue(withIdentifier: "goRecipeViewController", sender: nil)
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        if (segue.identifier == "goRecipe"){
+        if (segue.identifier == "goRecipeViewController"){
             let nextView: RecipeViewController = (segue.destination as? RecipeViewController)!
             nextView.selectedRecipeID = selectedRecipeID
         }

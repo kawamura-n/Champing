@@ -12,6 +12,10 @@ class MajorViewController: UIViewController {
         view.backgroundColor = UIColor.init(red: 240/255, green: 248/255, blue: 255/255, alpha: 90/100)
     }
     
+    @IBAction func goFavoriteRecipesButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "goFavoriteRecipesListViewController", sender: nil)
+    }
+    
     @IBAction func tappedMajor(sender: UIButton){
         switch sender.tag{
         case 0:
@@ -29,11 +33,11 @@ class MajorViewController: UIViewController {
         default:
             print("errer")
         }
-        performSegue(withIdentifier: "goMedium", sender: nil)
+        performSegue(withIdentifier: "goMediumViewController", sender: nil)
    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goMedium" {
+        if segue.identifier == "goMediumViewController" {
             let nextView: MediumViewController = segue.destination as! MediumViewController
             nextView.sendMajorNum = MajorTag
         }
