@@ -23,6 +23,8 @@
 		CB3D9F6C233F174B002407CC /* MediumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3D9F6B233F174B002407CC /* MediumViewController.swift */; };
 		CB3F14F8233FB0060034FCA1 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F14F7233FB0060034FCA1 /* ResultViewController.swift */; };
 		CB3F14FE233FC6B00034FCA1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F14FD233FC6B00034FCA1 /* MenuViewController.swift */; };
+		CB6A54A923604F97002C1818 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6A54A823604F97002C1818 /* MainViewController.swift */; };
+		CB6A54AB2360AC14002C1818 /* AddRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6A54AA2360AC14002C1818 /* AddRecipeViewController.swift */; };
 		CB7A29672355FEF600336243 /* SetFavoriteContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7A29662355FEF600336243 /* SetFavoriteContainerViewController.swift */; };
 		CBCDEA6F235A26B7005AF638 /* FavoriteRecipesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDEA6E235A26B7005AF638 /* FavoriteRecipesListViewController.swift */; };
 /* End PBXBuildFile section */
@@ -87,6 +89,8 @@
 		CB3D9F6B233F174B002407CC /* MediumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumViewController.swift; sourceTree = "<group>"; };
 		CB3F14F7233FB0060034FCA1 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		CB3F14FD233FC6B00034FCA1 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = ../MenuViewController.swift; sourceTree = "<group>"; };
+		CB6A54A823604F97002C1818 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CB6A54AA2360AC14002C1818 /* AddRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeViewController.swift; sourceTree = "<group>"; };
 		CB7A29662355FEF600336243 /* SetFavoriteContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetFavoriteContainerViewController.swift; sourceTree = SOURCE_ROOT; };
 		CBCDEA6E235A26B7005AF638 /* FavoriteRecipesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipesListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,6 +181,8 @@
 				CB304C822341A84C007575B6 /* Ingredient.swift */,
 				CB2E6A2C234068AF00495E3C /* RecipesDataModel.swift */,
 				CB3BEC2023293C6A00143885 /* Main.storyboard */,
+				CB6A54A823604F97002C1818 /* MainViewController.swift */,
+				CB6A54AA2360AC14002C1818 /* AddRecipeViewController.swift */,
 				CBCDEA6E235A26B7005AF638 /* FavoriteRecipesListViewController.swift */,
 				CB3BEC2523293C6E00143885 /* LaunchScreen.storyboard */,
 				CB3BEC2823293C6E00143885 /* Info.plist */,
@@ -444,12 +450,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB3BEC1F23293C6A00143885 /* MajorViewController.swift in Sources */,
+				CB6A54A923604F97002C1818 /* MainViewController.swift in Sources */,
 				CB3F14FE233FC6B00034FCA1 /* MenuViewController.swift in Sources */,
 				CB2D60592351C8B600E6A0E9 /* RecipeViewController.swift in Sources */,
 				CB3D9F6C233F174B002407CC /* MediumViewController.swift in Sources */,
 				CBCDEA6F235A26B7005AF638 /* FavoriteRecipesListViewController.swift in Sources */,
 				CB2E6A2D234068AF00495E3C /* RecipesDataModel.swift in Sources */,
 				CB7A29672355FEF600336243 /* SetFavoriteContainerViewController.swift in Sources */,
+				CB6A54AB2360AC14002C1818 /* AddRecipeViewController.swift in Sources */,
 				CB304C832341A84C007575B6 /* Ingredient.swift in Sources */,
 				CB3BEC1D23293C6A00143885 /* AppDelegate.swift in Sources */,
 				CB3F14F8233FB0060034FCA1 /* ResultViewController.swift in Sources */,

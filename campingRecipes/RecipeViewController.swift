@@ -20,6 +20,7 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.delegate = self
         
         ingledientTableView.delegate = self
         ingledientTableView.dataSource = self
@@ -242,6 +243,12 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         recipes.append(ingledientArray)
         recipes.append(howToMakeArray)
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        if let controller = viewController as? FavoriteRecipesListViewController {
+            controller.reset()
+        }
     }
   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

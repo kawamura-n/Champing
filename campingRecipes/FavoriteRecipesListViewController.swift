@@ -4,6 +4,7 @@ import RealmSwift
 class FavoriteRecipesListViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate  {
             
     @IBOutlet var collectionView: UICollectionView!
+        
     @IBAction func goMenuViewButton(_ sender: Any) {
         performSegue(withIdentifier: "goMenuViewController", sender: nil)
     }
@@ -47,8 +48,27 @@ class FavoriteRecipesListViewController: UIViewController,UICollectionViewDataSo
         collectionView.reloadData()
     }
     
+    func reset(){
+        arrayRecipesID = []
+        arrayRecipesName = []
+        arrayRecipesImage = []
+         
+        let realm = try! Realm()
+        let categoryResults = realm.objects(RecipesDataModel.self).filter("favorite == true")
+        for data in categoryResults {
+            let RecipesResult = realm.objects(RecipesDataModel.self).filter("recipeID == %@", data.recipeID)
+            arrayRecipesID.append(data.recipeID)
+            arrayRecipesImage.append(RecipesResult[0].image)
+            arrayRecipesName.append(RecipesResult[0].recipeName)
+        }
+         
+        collectionView.reloadData()
+        
+    }
+    
     func updateView(){
 
+        print("s")
         var ecologyBool :Bool
         var preparationBool :Bool
         arrayRecipesID = []
@@ -173,6 +193,7 @@ class FavoriteRecipesListViewController: UIViewController,UICollectionViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         collectionView.dataSource = self
         collectionView.delegate = self

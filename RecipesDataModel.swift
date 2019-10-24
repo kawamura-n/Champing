@@ -67,6 +67,7 @@ class RecipesDataModel: Object {
     @objc dynamic var time: Int = 0
     @objc dynamic var preparation: Bool = false
     @objc dynamic var favorite: Bool = false
+    @objc dynamic var : Bool = false
     
     override static func primaryKey() -> String? {
       return "recipeID"

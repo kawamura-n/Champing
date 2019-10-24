@@ -54,7 +54,6 @@ class MenuViewController: UIViewController,YSRadioButtonViewControllerDelegate {
         super.viewWillAppear(animated)
         let menuPos = self.menuView.layer.position
         self.menuView.layer.position.x = 2 * self.menuView.frame.width
-   //     self.menuView.layer.position.y = 2*self.menuView.frame.height
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
             self.menuView.layer.position.x = menuPos.x
             self.menuView.layer.position.y = menuPos.y

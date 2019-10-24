@@ -169,7 +169,7 @@ class ResultViewController: UIViewController,UICollectionViewDataSource, UIColle
         layout.minimumLineSpacing = 50
         collectionView.collectionViewLayout = layout
         
-        /*
+        
         //realmファイル削除
         let realmURL = Realm.Configuration.defaultConfiguration.fileURL!
         let realmURLs = [realmURL, realmURL.appendingPathExtension("lock"),
@@ -184,7 +184,7 @@ class ResultViewController: UIViewController,UICollectionViewDataSource, UIColle
                 print("errer : deleteRealmFile")
             }
         }
-        */
+        
  
         //URL取得
         print(Realm.Configuration.defaultConfiguration.fileURL!)
